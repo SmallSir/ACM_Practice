@@ -13,20 +13,19 @@
 #define inf 9999999; 
 using namespace std;
 
-double b[65][60],w,r[65],k,tt;
-int n,i,m,x,j,check;
+double b[65][60],r[65],k,tt;
+int n,i,m,x,j,w,check;
 int main()
 {
-	//cin>>n>>w>>m;
-	scanf("%d,%d,%d",&n,&w,&m);
-	cout<<n<<" "<<m<<endl;
+	cin>>n>>w>>m;
 	//for(i=1;i<=m;i++)
 	//	a[i]=(0.6lf)(n*w/m);
 	for(i=1;i<=n;i++)
 		r[i]=w;
 	x=1;
-	k=n*w/m;
+	k=n*w/m*1.000000;
 	tt=k;
+	cout<<k<<endl;
 	for(i=1;i<=n;i++)
 	{
 		while(r[i]!=0)
@@ -37,7 +36,7 @@ int main()
 				r[i]-=tt;
 				x++;
 				tt=k;
-				cout<<1<<" i "<<i<<" x "<<endl;
+				//cout<<1<<" i "<<i<<" x "<<endl;
 			}
 			else
 			{
@@ -49,6 +48,7 @@ int main()
 					x++;
 					tt=k;
 				}
+				//cout<<2<<" i "<<i<<" x "<<b[x][i]<<endl;
 			}
 		}
 	}
@@ -75,7 +75,6 @@ int main()
 	else
 	{
 		cout<<"YES"<<endl;
-		//cout<<n<<" "<<m<<endl;
 		for(i=1;i<=m;i++)
 		{
 			for(j=1;j<=n;j++)

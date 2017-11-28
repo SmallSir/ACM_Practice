@@ -13,72 +13,95 @@
 using namespace std;
 typedef long long LL;
 
-LL sum,ans,cnt,l,r;
-int i,T,flag,n;
-LL MOD=1e9+7;
-string str;
-long long int fast_pow(long long int x,long long int y)  
-{  
-    long long int res;  
-    res=1;  
-    while(y!=0)  
-    {  
-        if(y&1) res=(res*x)%MOD;  
-        y>>=1;  
-        x=(x*x)%MOD;  
-    }  
-    return res;  
-}  
+int dix[]={1,0,-1,0};
+int diy[]={0,1,0,-1};
+bool vis[105][105];
+char tu[105][105];
+int n,m;
+void dfs(int x,int y,int flag)
+{
+	int xx,yy,i;
+	vis[x][y]=1;
+	for(i=0;i<4;i++)
+	{
+		xx=dix[i]+x;
+		yy=diy[i]+y;
+		if(yy>=1&&yy<=m&&xx>=1&&xx<=n&&vis[xx][yy]==0&&tu[xx][yy]-'0'==flag)
+		{
+			vis[xx][yy]=1;
+			dfs(xx,yy,flag);	
+		}
+	}
+}
 int main()
 {
-	cin>>T;
-	while(T--)
-	{
-		cin>>str;
-		n=str.length();
-		sum=0;
-		ans=0;
-		flag=-1;
-		for(i=0;i<n;i++)
-		{
-			if(str[i]=='(')
+	 while(cin>>n>>m)
+	 {
+	 	 int flag1,flag2;
+	 	 flag1=flag2=0;
+	 	 int i,j,cnt0,cnt1;
+	 	 memset(tu,0,sizeof(tu));
+	 	 for(i=1;i<=n;i++)
+		 {
+		 	 for(j=1;j<=m;j++)
+			 {
+			 	 cin>>tu[i][j];
+			 }
+		 }
+		 memset(vis,0,sizeof(vis));
+		 cnt1=0,cnt0=0;
+		 for(i=1;i<=n;i++)
+		 {
+			for(j=1;j<=m;j++)
 			{
-				i++;
-				if(flag==-1)
+				if(vis[i][j]==0)
 				{
-					flag=0;
-					l=i;
-					ans=0;
-					for(;i<n;i++)
+					if(tu[i][j]-'0'==0)
 					{
-						if(str[i]==')')
-						{
-							r=i-1;
-							break;
-						}
-						ans=(ans*10+str[i]-'0')%MOD;
+						cnt0++;
+						dfs(i,j,0);
 					}
-				}
-				else
-				{
-					flag=-1;
-					cnt = 0;
-					for(;i<n;i++)
+					else
 					{
-						if(str[i]==')')
-							break;
-						cnt=(cnt*10+str[i]-'0')%MOD;
+						if(i==1)
+							flag1=1;
+						if(i==n)
+							flag2=1;
+						cnt1++;	
+						dfs(i,j,1);
 					}
-					LL k = fast_pow(10,r-l+1);
-					while(cnt--)
-						sum = (sum*k+ ans)%MOD;
-					ans=0;
 				}
 			}
-			else if(flag==-1&&str[i]<='9'&&str[i]>='0')
-				sum=(sum*10+str[i]-'0')%MOD;
-		}
-		cout<<sum<<endl;
-	}
- return 0;
+		 }
+		 if(cnt1!=1)
+		 {
+		 	 cout<<-1<<endl;
+		 }
+		 else
+		 {
+		 	 if(cnt0==3)
+			 {
+			 	 if(flag1&&flag2)
+				 {
+				 	 cout<<0<<endl;
+				 }
+				 else
+				 	 cout<<-1<<endl;
+			 }
+			 else if(cnt0==2)
+			{
+				if(flag1&&flag2)
+					cout<<1<<endl;
+				else if(flag1||flag2)
+					cout<<0<<endl;
+				else
+					cout<<-1<<endl;
+			}
+			 else if(cnt0==1)
+				cout<<1<<endl;
+			else
+				cout<<-1<<endl;
+		 }
+	 }
+	 return 0;
 }
