@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcxproj", "{7523D712-32F2-4099-84B0-9ED5B92C264D}"
+EndProject
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "test100", "..\test100.exe", "{3A4F85D2-6731-4A28-8205-9C32EB623384}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = D:\配置vim\VIM\code\ACM_Practice\test100.exe
+		RemoteMachine = ACER
+		StartingDirectory = D:\配置vim\VIM\code\ACM_Practice
+		Environment = 默认值
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7523D712-32F2-4099-84B0-9ED5B92C264D}.Debug|x64.ActiveCfg = Debug|x64
+		{7523D712-32F2-4099-84B0-9ED5B92C264D}.Debug|x64.Build.0 = Debug|x64
+		{7523D712-32F2-4099-84B0-9ED5B92C264D}.Debug|x86.ActiveCfg = Debug|Win32
+		{7523D712-32F2-4099-84B0-9ED5B92C264D}.Debug|x86.Build.0 = Debug|Win32
+		{7523D712-32F2-4099-84B0-9ED5B92C264D}.Release|x64.ActiveCfg = Release|x64
+		{7523D712-32F2-4099-84B0-9ED5B92C264D}.Release|x64.Build.0 = Release|x64
+		{7523D712-32F2-4099-84B0-9ED5B92C264D}.Release|x86.ActiveCfg = Release|Win32
+		{7523D712-32F2-4099-84B0-9ED5B92C264D}.Release|x86.Build.0 = Release|Win32
+		{3A4F85D2-6731-4A28-8205-9C32EB623384}.Debug|x64.ActiveCfg = Release|x86
+		{3A4F85D2-6731-4A28-8205-9C32EB623384}.Debug|x86.ActiveCfg = Release|x86
+		{3A4F85D2-6731-4A28-8205-9C32EB623384}.Release|x64.ActiveCfg = Release|x86
+		{3A4F85D2-6731-4A28-8205-9C32EB623384}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14DE777A-72C9-4F9B-96FF-E7B452601FBA}
+	EndGlobalSection
+EndGlobal
