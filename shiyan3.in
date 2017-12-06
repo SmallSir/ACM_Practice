@@ -1,0 +1,6 @@
+2 2
+function
+    a= 2+ 3 * 5e5;
+    x= (a+ b)/c;
+endfunc
+#
