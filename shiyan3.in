@@ -1,6 +1,9 @@
 2 2
 function
-    a= 2+ 3 * 5e5;
-    x= (a+ b)/c;
+if(a>b
+a=b+1
+then
+a=1+1;
 endfunc
 #
+
