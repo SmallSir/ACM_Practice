@@ -1,0 +1,9 @@
+2 2
+function
+if(a>b
+a=b+1
+then
+a=1+1;
+endfunc
+#
+
