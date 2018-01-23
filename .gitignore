@@ -21,7 +21,7 @@
 *.la
 *.a
 *.lib
-
+*.cpp
 # Executables
 *.exe
 *.out
