@@ -138,7 +138,7 @@ void quickSort(int l,int r)
 }
 
 
-void heapify(int x,int len)//╣ВуШ╤я
+void heapify(int x,int len)//Х╟┐Ф∙╢Е═├
 {
 	int left = x * 2;
 	int right = left + 1;
@@ -156,7 +156,7 @@ void heapify(int x,int len)//╣ВуШ╤я
 		heapify(Max,len);
 	}
 }
-void buildheap(int x)//╢╢╫╗╤я
+void buildheap(int x)//Е┬⌡Е╩╨Е═├
 {
 	for(int i = (x / 2);i>=1;i--)
 	{
@@ -186,17 +186,17 @@ int main()
 	cin>>n;
 	for(i=1;i<=n;i++)
 		cin>>a[i];
-	//ц╟ещ
+	//Е├▓ФЁ║
 	//bubbleSort();
-	//я║тЯеепР
+	//И─┴Ф▀╘Ф▌▓Е╨▐
 	//selectionSort();
-	//╡ЕхКеепР
+	//Ф▐▓Е┘╔Ф▌▓Е╨▐
 	//insertionSort();
-	//╧И╡╒еепР
+	//Е╫▓Е╧╤Ф▌▓Е╨▐
 	//mergeSort(1,n);
-	//©Лее
+	//Е©╚Ф▌▓
 	//quickSort(1,n);
-	//╤яеепР
+	//Е═├Ф▌▓Е╨▐
 	//heapSort();
 	for(i=1;i<=n;i++)
 		cout<<a[i]<<" ";
