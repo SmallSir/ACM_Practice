@@ -1,4 +1,4 @@
-//01�ֵ���-��ѯ�����������x��������ֵ
+//01瀛楀吀鏍�-鏌ヨ鏁板垪涓笌缁欏畾x鐨勫紓鎴栨渶澶у€�
 #include <cstdio>
 #include <cstring>
 #include <cstdlib>
